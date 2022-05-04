@@ -31,7 +31,7 @@ def predict():
 @app.route('/api/v1/retrain', methods=['GET'])
 def retrain():
 
-    data = pd.read_csv('data/Advertising.csv', index_col=0)
+    data = pd.read_csv('Advertising.csv', index_col=0)
 
     X = data.drop(columns=['sales'])
     y = data['sales']
