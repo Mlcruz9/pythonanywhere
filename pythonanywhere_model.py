@@ -28,7 +28,7 @@ def predict():
     return jsonify({'predictions': prediction[0]})
 
 
-@app.route('/api/v1/retrain', methods=['POST'])
+@app.route('/api/v1/retrain', methods=['GET'])
 def retrain():
 
     data = pd.read_csv('data/Advertising.csv', index_col=0)
